@@ -12,6 +12,8 @@ const CliCmdType *gCmdArray[] = {
 	&CMD_VERSION,
 	&CMD_BOARD,
 	&CMD_UIN_READ,
+	&CMD_GAIN_READ,
+	&CMD_GAIN_WRITE,
 	&CMD_UIN_CAL,
 	&CMD_RTC_GET,
 	&CMD_RTC_SET,

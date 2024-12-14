@@ -82,6 +82,7 @@ int doBoardCheck(int id, int dev) {
 
 int doBoardInit(int id) {
 	if(!(0 <= id && id <= 7)) {
+		printf("Id(stack level) out of range!");
 		return ARG_RANGE_ERROR;
 	}
 	int addr = SLAVE_OWN_ADDRESS_BASE + id;

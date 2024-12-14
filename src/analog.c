@@ -110,7 +110,7 @@ const CliCmdType CMD_GAIN_READ = {/*{{{*/
 	"grd",
 	2,
 	&doGainRead,
-	"  grd             Read gain code for scaling [0..7]->+/-[24,12,6,3,1.5,0.75,0.37,0.18]V\n",
+	"  grd              Read gain code for scaling [0..7]->+/-[24,12,6,3,1.5,0.75,0.37,0.18]V\n",
 	"  Usage:           "PROGRAM_NAME" <id> grd <channel>\n",
 	"  Example:         "PROGRAM_NAME" 0 grd 2 #Read gain code for input channel #2 on board #0\n",
 };
@@ -140,7 +140,7 @@ const CliCmdType CMD_GAIN_WRITE = {/*{{{*/
 	"gwr",
 	2,
 	&doGainWrite,
-	"  gwr             Write gain code for scaling [0..7]->+/-[24,12,6,3,1.5,0.75,0.37,0.18]V\n",
+	"  gwr              Write gain code for scaling [0..7]->+/-[24,12,6,3,1.5,0.75,0.37,0.18]V\n",
 	"  Usage:           "PROGRAM_NAME" <id> gwr <channel> <value[0..7]>\n",
 	"  Example:         "PROGRAM_NAME" 0 gwr 2 4#Set gain code to 4(+/-1.5V) for input channel #2 on board #0\n",
 };
