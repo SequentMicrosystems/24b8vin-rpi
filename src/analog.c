@@ -35,7 +35,7 @@ int valFloatSet(int dev, int baseAddr, int ch, float val) {
 /* bad channel check functoin {{{ */
 bool badUInCh(int ch) {
 	if(!(MIN_CH_NO <= ch && ch <= U_IN_CH_NO)) {
-		printf("0-10V input channel out of range![%d..%d]\n", MIN_CH_NO, U_IN_CH_NO);
+		printf("Input channel out of range![%d..%d]\n", MIN_CH_NO, U_IN_CH_NO);
 		return true;
 	}
 	return false;
