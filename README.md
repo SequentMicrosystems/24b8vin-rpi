@@ -45,3 +45,28 @@ cd ~/24b8vin-rpi/
 git pull
 sudo make install
 ```
+
+
+### Gain codes
+
+| **Gain Code** | **Voltage Range (±V)** |
+|---------------|-------------------------|
+| 0             | 24                     |
+| 1             | 12                     |
+| 2             | 6                      |
+| 3             | 3                      |
+| 4             | 1.5                    |
+| 5             | 0.75                   |
+| 6             | 0.37                   |
+| 7             | 0.18                   |
+
+#### Example usage
+```bash
+24b8vin 0 grd 2
+```
+> Read gain code for input channel #2 on board #0
+
+```bash
+24b8vin 0 gwr 2 4
+```
+> Set gain code to 4(±1.5V) for input channel #2 on board #0
