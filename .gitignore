@@ -1,0 +1,15 @@
+# binary
+/24b8vin
+# build directory
+/build/
+
+# python build directories
+__pycache__/
+/python/build/
+/python/dist/
+/python/docs/markdown/
+/python/docs/doctrees/
+/python/SM24b8vin.egg-info/
+
+# nvim session
+.s
