@@ -9,14 +9,14 @@ Example:
 ```bash
 ~$ 24b8vin 0 cfg485wr 1 1 9600 1 0
 ```
-Set modbus RTU, slave address offset = 1, baudrate 9600bps, one stop bit, parity none
+Set Modbus RTU, slave address offset = 1, baud rate 9600bps, one stop bit, parity none
 ```bash
 ~$ 24b8vin -h cfg485wr
 ```
 display the full set of options
 
 ## Slave Address
-The slave address is added with the "stack level" jumpers. For example, the jumpers configuration for stack level 1  (one jumper in position ID0) slave address offset to 1 corresponds to slave address 2.
+The slave address is added with the "stack level" dipswitches. For example, the dipswitches configuration for stack level 1  (one switch in position ID0 is ON) slave address offset to 1 corresponds to slave address 2.
 
 ## Modbus object types
 All Modbus RTU object types with standard addresses are implemented: Coils, Discrete Inputs, Input registers, and Holding registers.
@@ -52,27 +52,51 @@ Access level Read Only, Size 16 bits
 
 | Device function | Register Address | Modbus Address| Description | Measurement Unit |
 | --- | --- | --- | --- | --- |
-| IR_VIN_H1| 30001 | 0x00 | Temperature on RTD1 sensor| degC/10 |
-| IR_VIN_L1| 30002 | 0x01 | Temperature on RTD1 sensor| degC/10 |
-| 0-10V_IN_1 | 30003 | 0x02 | 0-10V Input 1 | mV |
-| 0-10V_IN_2 | 30004 | 0x03 | 0-10V Input 2 | mV |
-| 4-20mA_IN_1 | 30005 | 0x04 | 4-20mA Input 1 | uA |
-| 4-20mA_IN_2 | 30006 | 0x05 | 4-20mA Input 2 | uA |
+| IR_VIN_H1| 30001 | 0x00 | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L1| 30002 | 0x01 | In voltage, Low 16 bits of IEEE 754 number | V |
+| IR_VIN_H2| 30003 | 0x02 | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L2| 30004 | 0x03 | In voltage, Low 16 bits of IEEE 754 number | V |
+| IR_VIN_H3| 30005 | 0x04 | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L3| 30006 | 0x05 | In voltage, Low 16 bits of IEEE 754 number | V |
+| IR_VIN_H4| 30007 | 0x06 | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L4| 30008 | 0x07 | In voltage, Low 16 bits of IEEE 754 number | V |
+| IR_VIN_H5| 30009 | 0x0a | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L5| 30010 | 0x0b | In voltage, Low 16 bits of IEEE 754 number | V |
+| IR_VIN_H6| 30011 | 0x0c | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L6| 30012 | 0x0d | In voltage, Low 16 bits of IEEE 754 number | V |
+| IR_VIN_H7| 30013 | 0x0e | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L7| 30014 | 0x0f | In voltage, Low 16 bits of IEEE 754 number | V |
+| IR_VIN_H8| 30015 | 0x10 | In voltage, High 16 bits of IEEE 754 number | V |
+| IR_VIN_L8| 30016 | 0x11 | In voltage, Low 16 bits of IEEE 754 number | V |
 
 
 ### Holding registers
 
 Access level Read/Write, Size 16 bits
 
-| Device function | Register Address | Modbus Address | Measurement Unit | Range |
-| --- | --- | --- | --- | --- |
-| 0-10V_OUT_1 | 40001 | 0x00 | mV | 0..10000 |
-| 0-10V_OUT_2 | 40002 | 0x01 | mV | 0..10000 |
-| 4-20mA_OUT_1 | 40003 | 0x04 | uA | 4000..20000 |
-| 4-20mA_OUT_2 | 40004 | 0x05 | uA | 4000..20000 |
-| SERVO 1 | 40005 | 0x06 | %/10 | -1200..1200|
-| SERVO 2 | 40006 | 0x07 | %/10 | -1200..1200|
-| DC_MOTOR | 40007 | 0x08 | %/10 | -1000..1000|
+| Device function | Register Address | Modbus Address | Unit | Range | Description |
+| --- | --- | --- | --- | --- | --- |
+| HR_GAIN_1 | 40001 | 0x00 |  | 0..7 | Gain Settings |
+| HR_GAIN_2 | 40002 | 0x01 |  | 0..7 | Gain Settings |
+| HR_GAIN_3 | 40003 | 0x02 |  | 0..7 | Gain Settings |
+| HR_GAIN_4 | 40004 | 0x03 |  | 0..7 | Gain Settings |
+| HR_GAIN_5 | 40005 | 0x04 |  | 0..7 | Gain Settings |
+| HR_GAIN_6 | 40006 | 0x05 |  | 0..7 | Gain Settings |
+| HR_GAIN_7 | 40007 | 0x06 |  | 0..7 | Gain Settings |
+| HR_GAIN_8 | 40008 | 0x07 |  | 0..7 | Gain Settings |
+
+Gain settings:
+|Gain code | Full scale |
+| --- | --- |
+| 0 | ±24 V|
+| 1 | ±12 V|
+| 2 | ±6 V|
+| 3 | ±3 V|
+| 4 | ±1.5 V|
+| 5 | ±750 mV|
+| 6 | ±370 mV|
+| 7 | ±180 mV|
+
 
 
 ## Function codes implemented
