@@ -74,19 +74,19 @@ Access level Read Only, Size 16 bits
 
 Access level Read/Write, Size 16 bits
 
-| Device function | Register Address | Modbus Address | Unit | Range | Description |
-| --- | --- | --- | --- | --- | --- |
-| HR_GAIN_1 | 40001 | 0x00 |  | 0..7 | Gain Settings |
-| HR_GAIN_2 | 40002 | 0x01 |  | 0..7 | Gain Settings |
-| HR_GAIN_3 | 40003 | 0x02 |  | 0..7 | Gain Settings |
-| HR_GAIN_4 | 40004 | 0x03 |  | 0..7 | Gain Settings |
-| HR_GAIN_5 | 40005 | 0x04 |  | 0..7 | Gain Settings |
-| HR_GAIN_6 | 40006 | 0x05 |  | 0..7 | Gain Settings |
-| HR_GAIN_7 | 40007 | 0x06 |  | 0..7 | Gain Settings |
-| HR_GAIN_8 | 40008 | 0x07 |  | 0..7 | Gain Settings |
+| Device function | Register Address | Modbus Address | Range | Description |
+| --- | --- | --- | --- | --- |
+| HR_GAIN_1 | 40001 | 0x00 | 0..7 | Gain Settings for CH1 |
+| HR_GAIN_2 | 40002 | 0x01 | 0..7 | Gain Settings for CH2 |
+| HR_GAIN_3 | 40003 | 0x02 | 0..7 | Gain Settings for CH3 |
+| HR_GAIN_4 | 40004 | 0x03 | 0..7 | Gain Settings for CH4 |
+| HR_GAIN_5 | 40005 | 0x04 | 0..7 | Gain Settings for CH5 |
+| HR_GAIN_6 | 40006 | 0x05 | 0..7 | Gain Settings for CH6 |
+| HR_GAIN_7 | 40007 | 0x06 | 0..7 | Gain Settings for CH7 |
+| HR_GAIN_8 | 40008 | 0x07 | 0..7 | Gain Settings for CH8 |
 
 Gain settings:
-|Gain code | Full scale |
+|Code | Full scale |
 | --- | --- |
 | 0 | ±24 V|
 | 1 | ±12 V|
