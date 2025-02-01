@@ -1,6 +1,6 @@
 # 24b8vin-rpi
 
-Drivers for [Eight 24-Bit Analog Inputs DAQ 8-Layer Stackable HAT for RaspberryPi](https://sequentmicrosystems.com/products/eight-24bit-analog-inputs-daq-8-layer-stackable-hat-for-raspberry-pi)
+Drivers for [Eight 24-Bit Analog Inputs DAQ 8-Layer Stackable HAT for RaspberryPi](https://sequentmicrosystems.com/products/eight-24-bit-analog-inputs-daq-8-layer-stackable-hat-for-raspberry-pi)
 
 ![image](https://github.com/user-attachments/assets/853b57af-b7a1-4809-9c44-6f8753f03398)
 
