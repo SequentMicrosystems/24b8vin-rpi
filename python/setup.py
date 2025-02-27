@@ -2,11 +2,11 @@
 
 # For testing
 #twine upload --repostitory testpypi dist/*
-#pip install --index-url https://test.pypi.org/simple/ --no-deps multiio
+#pip install --index-url https://test.pypi.org/simple/ --no-deps SM24b8vin
 
 # For release
 #twine upload dist/*
-#pip install multiio
+#pip install SM24b8vin
 
 
 with open("README.md", 'r') as f:
@@ -14,9 +14,9 @@ with open("README.md", 'r') as f:
 
 from setuptools import setup, find_packages
 setup(
-    name='SM24b8vin',
+    name='sm24b8vin',
     packages=find_packages(),
-    version='1.0.0',
+    version='1.0.1',
     license='MIT',
     description='Library to control 24-Bit Analog Inputs DAQ Card',
     long_description=long_description,
