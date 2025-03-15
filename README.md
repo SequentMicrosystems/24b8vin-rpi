@@ -1,6 +1,6 @@
 # 24b8vin-rpi
 
-Drivers for [Eight 24-Bit Analog Inputs DAQ 8-Layer Stackable HAT for RaspberryPi](https://sequentmicrosystems.com/products/eight-24bit-analog-inputs-daq-8-layer-stackable-hat-for-raspberry-pi)
+Drivers for [Eight 24-Bit Analog Inputs DAQ 8-Layer Stackable HAT for RaspberryPi](https://sequentmicrosystems.com/products/eight-24-bit-analog-inputs-daq-8-layer-stackable-hat-for-raspberry-pi)
 
 ![image](https://github.com/user-attachments/assets/853b57af-b7a1-4809-9c44-6f8753f03398)
 
@@ -49,16 +49,16 @@ sudo make install
 
 ### Gain codes
 
-| **Gain Code** | **Voltage Range (±V)** |
+| **Gain Code** | **Voltage Range (V)** |
 |---------------|-------------------------|
-| 0             | 24                     |
-| 1             | 12                     |
-| 2             | 6                      |
-| 3             | 3                      |
-| 4             | 1.5                    |
-| 5             | 0.75                   |
-| 6             | 0.37                   |
-| 7             | 0.18                   |
+| 0             | ±24                     |
+| 1             | ±12                     |
+| 2             | ±6                      |
+| 3             | ±3                      |
+| 4             | ±1.5                    |
+| 5             | ±0.75                   |
+| 6             | ±0.37                   |
+| 7             | ±0.18                   |
 
 #### Example usage
 ```bash
