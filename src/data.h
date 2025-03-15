@@ -52,6 +52,14 @@ enum
 
 };
 
+enum //save samples command
+{
+	SS_CMD_NONE = 0,
+	SS_CMD_START_SAVE,
+	SS_CMD_START_LOOK_FOR_TH,
+};
+
+
 enum
 {
 
@@ -60,7 +68,6 @@ enum
 	I2C_MEM_LED_CLR,
 
 	I2C_U_IN_VAL1_ADD, //8x floating point values expressed in Volts
-	I2C_MEM_U_IN = I2C_U_IN_VAL1_ADD,
 
 	I2C_GAIN_CH1 = I2C_U_IN_VAL1_ADD + U_IN_CH_NO * ANALOG_VAL_SIZE,// 8x gain codes [0..7] setting full scale as follows:
 	// 0 => +/-24V
@@ -72,7 +79,9 @@ enum
 	// 6 => +/-0.37V
 	// 7 => +/-0.18V
 
-	I2C_MEM_DIAG_TEMPERATURE_ADD = I2C_GAIN_CH1 + U_IN_CH_NO,
+	I2C_MEM_SR_SEL = I2C_GAIN_CH1 + U_IN_CH_NO, // 0 = 250sps, 1 = 500sps, 2 = 1Ksps; 3 = 2Ksps; 4 = 4Ksps; 5 = 8Ksps
+
+	I2C_MEM_DIAG_TEMPERATURE_ADD,
 	I2C_MEM_DIAG_RASP_V_ADD,
 	I2C_MEM_DIAG_RASP_V,
 	I2C_MEM_DIAG_RASP_V1,
@@ -108,6 +117,21 @@ enum
 	I2C_MEM_CALIB_CHANNEL = I2C_MEM_CALIB_VALUE + 4,
 	I2C_MEM_CALIB_KEY, //set calib point -> 0xaa; reset calibration on the channel -> 0x55
 	I2C_MEM_CALIB_STATUS,
+	I2C_MEM_CLOCK_SET,// 0 -> internal clock usage, no cloock output, 1 -> internal clock usage, clock output, 2 -> external clock usage
+	I2C_MEM_SYNC_SOURCE, //0 -> internal sync no sync out, 1 ->internal sync, sync out to connector, 2 - external sync usage
+	I2C_MEM_SYNC_CMD,// 0xaa sync signal is sent accordingly with
+
+	I2C_MEM_SAVE_CH,
+	I2C_MEM_SAVE_N_SMAPLES,
+	I2C_MEM_SAVE_THRESHOLD =I2C_MEM_SAVE_N_SMAPLES + 2,
+	I2C_MEM_SAVE_STATUS = I2C_MEM_SAVE_THRESHOLD + 4,
+	I2C_MEM_SAVE_CMD,
+
+
+	I2C_MEM_SAVE_FIFO ,
+	I2C_MEM_SAVE_FIFO_LEVEL = I2C_MEM_SAVE_FIFO +4,
+	I2C_MEM_SAVE_FIFO_STATUS = I2C_MEM_SAVE_FIFO_LEVEL + 2,
+
 
 	I2C_MEM_UPDATE_ADD = 0xaa,
 
